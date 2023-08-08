@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+h2 {
+    font-weight: 400;
+    color: white;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+p {
+    font-size: 0.7rem;
+    color: rgb(0, 0, 0);
+}
+
+ul {
+    justify-content: center;
+}
+li {
+    color: white;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+}
+
+a {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+/* formulario*/
+label, input {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+.contenedorGrid {
+    background-color: rgb(222, 222, 222);
+    grid-template-columns: repeat(4, 1fr); 
+    border: 1px solid rgb(59, 16, 16);
+    justify-items:center;
+    align-items:center;
+    column-gap: 100px;
+    height: 500px;
+    width: 500px;
+    display: grid;
+    margin: auto;
+    row-gap: 50px;
+}
+
+ul {
+    display: flex;
+}
+
+footer {
+    justify-content: space-between;
+    align-items:center;
+    display: flex;
+    padding: 2rem;
+    bottom: 0;
+    grid-area: footer;
+}
+
+/* mobile */
+.gridPadre {
+    text-align: left;
+}
+
+.gridContacto {
+    text-align: left;
+}
+
+.encabezado {
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    padding: 3rem;
+    grid-area: encabezado;
+}
+.navegacion {
+    background-size: cover;
+    background-image: url(/img/madre-hijo-pie-casa-junto-ventana.jpg);
+    background-color: #4b114b83;
+    grid-area: navegacion;
+    padding: 3rem;
+    margin: 1rem ;
+    border-radius: 25px;
+}
+.main {
+    background-color: #d4d4d4;
+    grid-area: main;
+    color: #000000;
+    padding: 3rem;
+    height: auto;
+    margin: 1rem;
+    border-radius: 25px;
+}
+.seccionA {
+
+    color: white;
+    height: auto;
+    padding: 3rem;
+    grid-area: seccionA;
+    margin: 1rem ;
+    border-radius: 25px;
+}
+.seccionB {
+    background-color: #d4d4d4;
+    color: #000000;
+    grid-area: seccionB;
+    padding: 3rem;
+    height: auto;
+    color: #000000;
+    margin: 1rem ;
+    border-radius: 25px;
+}
+.seccionC {
+    color: white;
+    height: auto;
+    grid-area: seccionA;
+    margin: 1rem ;
+    border-radius: 25px;
+}
+
+.publicidad {
+    background-color: #be0078;
+    grid-area: publicidad;
+    text-align: center;
+    padding: 3rem;
+    margin: 1rem ;
+    border-radius: 25px;
+}
+.pie {
+    background-color: #000000;
+    grid-area: pie;
+    padding: 3rem;
+    justify-content: center;
+    margin: 1rem;
+}
+
+@media (min-width: 768px) {
+    /* vista tablet */
+    .gridPadre {
+        display: grid;
+        grid-template-areas: 
+        "encabezado encabezado"
+        "navegacion seccionA"
+        "navegacion seccionA"
+        "navegacion seccionB"
+        "main publicidad"
+        "pie pie"
+        ;
+    }
+    .gridContacto {
+        display: grid;
+        grid-template-areas: 
+        "encabezado encabezado"
+        "seccionC seccionC"
+        "navegacion navegacion"
+        "seccionB seccionB"
+        "publicidad publicidad"
+        "main main"
+        "pie pie"
+        ;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+    p {
+        font-size: 1rem;
+    }
+    li {
+        font-size: 1rem;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+
+    }
+
+@media (min-width: 1024px) {
+    /* vista desktop */
+    .gridPadre {
+        grid-template-areas:
+        "pie pie publicidad"
+        "navegacion seccionB seccionB"
+        "encabezado encabezado navegacion"
+        "navegacion navegacion seccionA"
+        "navegacion seccionA seccionA"
+        "main main main"
+        ;
+    }
+
+    .gridContacto {
+        display: grid;
+        grid-template-areas: 
+        "encabezado encabezado"
+        "seccionC seccionC"
+        "navegacion seccionB"
+        "navegacion seccionB"
+        "publicidad publicidad"
+        "main main"
+        "pie pie"
+        ;
+    }
+
+    .encabezado {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        background-color: black;
+        position: sticky;
+        padding: 30px;
+        top: 0;
+        grid-area: encabezado;
+    }
+    .navegacion {
+        background-image: url(/img/linda-mujer-sonriente-disfrutando-tiempo-libre-casa.jpg);
+        background-color: #d4d4d4;
+        grid-area: navegacion;
+    }
+    .main {
+        background-color: #d4d4d4;
+        grid-area: main;
+        border-radius: 25px;
+    }
+    .seccionA {
+        background-color: #d4d4d4;
+        height: auto;
+        grid-area: seccionA;
+        border-radius: 25px;
+    }
+    .seccionB {
+        background-color: #d4d4d4;
+        color: #000000;
+        grid-area: seccionB;
+        height: auto;
+        border-radius: 25px;
+    }
+    .publicidad {
+        background-color: #ff0000;
+        grid-area: publicidad;
+        text-align: center;
+        border-radius: 25px;
+    }
+    .pie {
+        background-color: #000000;
+        grid-area: pie;
+    }
+    
+}
